@@ -1,0 +1,465 @@
+@import "tailwindcss";
+html,body, #root{
+  height: 100%;
+  width: 100%;
+}
+
+*::-webkit-scrollbar{
+  display: none;
+  transition: all ease-in-out 2s linear ;
+}
+*{
+  font-family: "Varela Round", sans-serif;
+  transition: all 2ms linear ;
+}
+.font-ephesis {
+  font-family: 'Ephesis', cursive;
+}
+
+.font-fascinate {
+  font-family: 'Fascinate Inline', cursive;
+}
+:root {
+  --bg: #09090B;
+  --card: #111827;        
+  --border: #1E293B;      
+  --text-h: #E0F2FE;
+  --text-p: #64748B;
+  --btn: #06B6D4;         
+  --btn-t: #0F172A;       
+  --nav: #0F172A;         
+  --nav-t: #E0F2FE;       
+  --nav-h: #38BDF8;       
+}
+[data-theme="modern-soft-dark"] {
+  --bg: #0B0F19;
+  --card: #111827;
+  --border: #1F2937;
+  --text-h: #F8FAFC;
+  --text-p: #9CA3AF;
+  --btn: #3B82F6;
+  --btn-t: #FFFFFF;
+  --nav: #111827;
+  --nav-t: #F8FAFC;
+  --nav-h: #60A5FA;
+}
+[data-theme="neo-light"] {
+ --bg: #F9FAFB;
+  --card: #FFFFFF;
+  --border: #E5E7EB;
+
+  --text-h: #1F2937;
+  --text-p: #6B7280;
+
+  --btn: #2563EB;
+  --btn-t: #FFFFFF;
+
+  --nav: #FFFFFF;
+  --nav-t: #111827;
+  --nav-h: #2563EB;
+}
+[data-theme="luxury-gold-dark"] {
+  --bg: #0E0E0E;
+  --card: #1A1A1A;
+  --border: #2D2D2D;
+
+  --text-h: #F5F5F5;
+  --text-p: #A3A3A3;
+
+  --btn: #D4AF37;
+  --btn-t: #1A1A1A;
+
+  --nav: #1A1A1A;
+  --nav-t: #F5F5F5;
+  --nav-h: #FFD700;
+}
+[data-theme="pastel-calm"] {
+   --bg: #F0F4F8;
+  --card: #FFFFFF;
+  --border: #D1D5DB;
+
+  --text-h: #1E293B;
+  --text-p: #6B7280;
+
+  --btn: #6366F1;
+  --btn-t: #FFFFFF;
+
+  --nav: #FFFFFF;
+  --nav-t: #1E293B;
+  --nav-h: #8B5CF6;
+}
+[data-theme="cyber-neon-dark"] {
+    --bg: #0F0F0F;
+  --card: #1A1A1D;
+  --border: #292929;
+
+  --text-h: #E5E5E5;
+  --text-p: #A0A0A0;
+
+  --btn: #00E5FF;
+  --btn-t: #000000;
+
+  --nav: #1A1A1D;
+  --nav-t: #E5E5E5;
+  --nav-h: #00FFFF;
+}
+.slick-slider {
+  height: 100%;
+}
+.slick-slide {
+  height: 100%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.slick-list {
+  height: 100%;
+}
+.slick-track {
+  height: 100%;
+  display: flex;
+}
+@media (max-width: 480px) {
+  /* styles for mobile phones only */
+  .mainDiv{
+    height: fit-content;
+    width: 100%;
+  }
+  .nav{
+    padding-top: 1rem;
+  }
+  .navRoutes{
+    display: none;
+  }
+  .navLogo{
+    width: 40%;
+  }
+  .searchBar{
+    width: 45%;
+  }
+  .navLogin{
+    position: fixed;
+    width: 18vw;
+    bottom: 2.3%;
+    right: 4%;
+    z-index: 1;
+  }
+  .profileImage{
+    width: 60%;
+    margin: 0;
+  }
+  .noUser{
+     padding-right: 7.8rem !important;
+  }
+  .navMobileRoutes{
+    margin: 0;
+    padding: 0 6.5rem 0 1.3rem;
+    width: 95%;
+    height: 8vh;
+    background-color: var(--nav);
+    position: fixed;
+    display: initial;
+    left: 2%;
+    bottom: 1%;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .profileIcon{
+    width: 100%;
+    font-size: 1.8rem;
+  }
+  .profileBtnBak{
+    padding: 5px 10px;
+    border-radius: 50%
+  }
+  .navIcons{
+    font-size: 2rem;
+  }
+  .productCartContainer{
+    padding: 1rem;
+    gap: 18px;
+    overflow : hidden;
+  }
+  .productCart{
+    width: 44vw;
+    height: 35vh;
+  }
+  .imgContainer{
+    height: 70%;
+  }
+  .productHeading{
+    font-size: 1rem;
+  }
+  .productCartDetail{
+    height: 25%;
+  }
+  .productPrice{
+    font-size: 1.3rem;
+  }
+  .cartBtn{
+    padding: .6rem .9rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+  }
+  .createProductForm{
+    padding: 1.5rem;
+  }
+  .createProductHeading{
+    font-size: 1.8rem;
+    letter-spacing: 4px;
+  }
+  .inputDiv{
+    gap: .5rem;
+    flex-direction: column;
+  }
+  .inputDiv > h3{
+    font-size: 1.2rem;
+    width: 100%;
+  }
+  .inputDiv > input{
+    width: 100%;
+  }
+  .inputDiv > textarea{
+    width: 100%;
+  }
+  .profileHeading{
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-transform: capitalize;
+  }
+  .prfileInfo{
+    flex-direction: column;
+  }
+  .profileLeft{
+    width: 100%;
+  }
+  .userInfo{
+    width: 100%;
+    padding: 1.5rem;
+  }
+  .userInfoInput{
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .userInfoInput > h2{
+    width: 100%;
+  }
+  .userInfoInput > input{
+    width: 100%;
+  }
+  .profileBtn{
+    font-size: 1rem;
+  }
+  .themeDiv{
+    padding: 1.5rem;
+  }
+  .themeH1{
+    margin: 0;
+  }
+  .themeColon{
+    margin: 0;
+  }
+  .themeSwitcher{
+    width: 100%;
+  }
+  .userCartMainDiv{
+    padding: 1rem;
+  }
+  .userCartTopDiv > h1{
+    font-size: 2rem;
+  }
+  .userCartTopDiv > button{
+    font-size: .8rem;
+    letter-spacing: 1px;
+    padding: .5rem .7rem;
+  }
+  .userCartHeadings{
+    display: none;
+  }
+  .userCartContainer{
+    padding: 8px;
+    border-radius: 1rem;
+    position: relative;
+    margin: 0;
+    height: 12vh;
+    background-color: var(--card);
+    /* background: #000; */
+  }
+  .productInfor{
+    width: 80%;
+    position: absolute;
+    top: 5%;
+  }
+  .productInfor > img{
+    height: 10vh;
+    width: 100px;
+    object-fit: cover;
+  }
+  .productHeading{
+    margin: 0;
+    padding: 0;
+    padding-top: .2rem;
+    padding-left: .7rem;
+  }
+  .productHeading > h1{
+    /* background-color: green; */
+    font-size: .8rem;
+    width: 100%;
+    
+  }
+  .productHeading > h2{
+    display: none;
+  }
+  .productPrice{
+    display: none;
+  }
+  .ProductIncDec{
+    position: absolute;
+     left: 25%;
+    bottom: 10%;
+  }
+  .productTotalPrice{
+      position: absolute;
+      top: 40%;
+      right: 1%;
+      width: 30%;
+  }
+  .productTotalPrice > h1{
+    font-size: 1.1rem;
+  }
+  .userCartInfo{
+    height: fit-content;
+    padding: 1rem 0;
+    left: 2%;
+    bottom: 10%;
+  }
+  .userCartInfo > div > h1{
+    font-size: .7rem;
+  }
+  .userCartInfo > div > h2{
+    font-size: 1rem;
+  }
+  .userCartInfo > button{
+    font-size: .8rem;
+  }
+  .loginBg{
+    width: 90%;
+    height: 50%;
+  }
+  .registerBg{
+    width: 90%;
+  }
+  .aboutTopDiv{
+    height: 57vh;
+    justify-content: start;
+  }
+  .aboutTopDiv > h1{
+    margin-top: 4rem;
+    font-size: 2.8rem;
+  }
+  .aboutTopDiv > h3{
+    width: 89%;
+    font-size: 1rem;
+  }
+  .aboutSecDiv{
+    gap: 1rem;
+    height: fit-content;
+    flex-direction: column;
+  }
+  .secDivFirst{
+    width: 100%;
+    padding: 1rem;
+  }
+  .secDivFirst > h1{
+    font-size: 2rem;
+  }
+  .secDivFirst > ol{
+    padding-left: 1rem;
+  }
+  .secDivSec{
+    width: 100%;
+    padding: 0;
+  }
+  .secDivSec > div{
+    width: 46%;
+  }
+  .productDetail{
+    justify-content: start;
+    flex-direction: column;
+    height: fit-content;
+  }
+  .productImg{
+    width: 100%;
+    height: 40vh ;
+  }
+.slick-slide {
+  height: 50vh;
+}
+.slick-list {
+  height: 40vh;
+}
+.slick-track {
+  height: 40vh;
+}
+.productDet{
+  width: 100%;
+  height: fit-content;
+}
+.productDet > h1{
+    margin-top: .5rem;
+}
+.productEditDivContainer{
+  padding: .5rem 1rem;
+}
+.productEditBtn{
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+.updateProductDetailDiv{
+  padding: 1rem;
+  margin-top: 1rem;
+}
+.updateProductDetailDiv > h1{
+  font-size: 1.8rem;
+}
+.updateProductForm > div{
+  flex-direction: column;
+  gap: .5rem;
+}
+.updateProductForm > div > h3{
+  width: 100%;
+}
+.updateProductForm > div > input{
+  width: 100%;
+}
+.updateProductForm > div > textarea{
+  width: 100%;
+  height: 20vh;
+}
+#updateBtnDiv{
+    flex-direction: row;
+}
+#updateBtnDiv > button{
+  font-size: 1rem;
+}
+
+ 
+
+
+  .footer{
+    height: 25vh;
+  }
+  .footerDetail{
+    width: 100%;
+  }
+  .footerDetail > h3{
+    font-size: 1rem;
+   }
+  .footerIcons{
+    width: 40%;
+  }
+  
+}
