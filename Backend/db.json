@@ -23,21 +23,21 @@
               "https://img.ltwebstatic.com/images3_spmp/2024/08/09/24/172318835752c2b6acbfe9a1ae23633b443b146c87_square.png"
             ]
           },
-          "quantity": 1
+          "quantity": 2
         },
         {
           "product": {
-            "id": "6854298f028e9678dd8f9bc6",
-            "title": "20pcs Artificial Green Plant Leaves For Decoration",
-            "price": 0.83,
-            "description": "Free Returns ✓ Free Shipping✓. 20pcs Artificial Green Plant Leaves Valentine'S Day Gift DIY Cake Decoration, Candy Box, Birthday Party Decoration, Wedding Flower Basket, Bride Holding Flowers, Home Decoration, Dining Room, Bedroom, Windowsill Decoration, Vase Ornaments, Valentine'S Day, New Year Decoration, Outdoor Garden, Start Of School Season- Artificial Plants at SHEIN.",
-            "category": "Artificial Plants",
+            "id": "6854298f028e9678dd8f9bc7",
+            "title": "10pcs Transparent Baking Boxes With Window",
+            "price": 6.63,
+            "description": "Free Returns ✓ Free Shipping✓. 10pcs Transparent Baking Boxes With Window, Dessert Box, Pastry Box,  Gift Box, Easy And Convenient, Safe For Food Contact, Can Be Mixed And Assembled Sweets, Chocolates, Perfect For Celebrations And Home Baking- Wrapping & Packaging at SHEIN.",
+            "category": "Wrapping & Packaging",
             "images": [
-              "https://img.ltwebstatic.com/images3_pi/2023/03/21/1679371394d7472f3dba597399ac51313b1c4e57e5.jpg",
-              "https://img.ltwebstatic.com/images3_pi/2023/03/21/1679371399f866f9fb1a81a611a5057f38e001e470.jpg",
-              "https://img.ltwebstatic.com/images3_pi/2023/03/21/167937139679397b94601f53caa34da231f57c59e6.jpg",
-              "https://img.ltwebstatic.com/images3_pi/2023/03/21/16793713973e3aab0d8d662ca8c2dec4ee328816c0.jpg",
-              "https://img.ltwebstatic.com/images3_pi/2023/03/21/1679371400834d2c4d55ad3d73b7ea5f7167ac43a3.jpg"
+              "https://img.ltwebstatic.com/images3_spmp/2024/08/07/65/1723031716fbe5f9c239ee354e1efc50bd5e968610.jpg",
+              "https://img.ltwebstatic.com/images3_spmp/2024/08/07/65/17230317160bbb402f097029d7c9faa63e541aac8f.jpg",
+              "https://img.ltwebstatic.com/images3_spmp/2024/08/07/65/17230317168de1df1ec9fa499c061535878ade4984.jpg",
+              "https://img.ltwebstatic.com/images3_spmp/2024/08/07/c3/17230317204caf4e51840fd76dbc286f97ca3ad686.jpg",
+              "https://img.ltwebstatic.com/images3_spmp/2024/08/07/9f/1723031721489cf7418f7c520107bab0f3da8d3ec0.jpg"
             ]
           },
           "quantity": 1
@@ -45,13 +45,31 @@
       ]
     },
     {
-      "id": "42FeGN0xJWYoj38F7yb6r",
-      "username": "Aniket Sharma",
+      "id": "s1-Mkny1CCXAesk-IsFh4",
+      "username": "Aniket sharma",
       "profile": "https://images.unsplash.com/photo-1750797636255-8c939940bcad?q=80&w=1112&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "email": "anmol@gmail.com",
-      "password": "123",
+      "email": "aniket@gmail.com",
+      "password": "",
       "isAdmin": false,
-      "cart": []
+      "cart": [
+        {
+          "product": {
+            "id": "6854298f028e9678dd8f9bd1",
+            "title": "Jepeak Decorative Linen Throw Pillow Covers",
+            "price": 24.2,
+            "description": "Free Returns ✓ Free Shipping✓. Jepeak Jepeak Decorative Linen Throw Pillow Covers Cushion Cases, Pack Of 4 Rustic Woven Textured Pillow Covers For Sofa Bed Couch, 18x18 Inch- Cushion Cover at SHEIN.",
+            "category": "Cushion Cover",
+            "images": [
+              "https://img.ltwebstatic.com/images3_spmp/2024/08/15/86/17237309127563d4909a2fdc9c0d56b016b0d41e29_square.jpg",
+              "https://img.ltwebstatic.com/images3_spmp/2024/08/07/7f/17230332331d22aa53d73366b1dddc9bf06ab7c7e5_square.jpg",
+              "https://img.ltwebstatic.com/images3_spmp/2024/08/07/7f/172303323321bb9122a69c973154603be06bd45f46_square.jpg",
+              "https://img.ltwebstatic.com/images3_spmp/2024/08/07/dc/1723033232b234dfe3612e3086bb8b4b17b06229f4_square.jpg",
+              "https://img.ltwebstatic.com/images3_spmp/2024/08/07/dc/1723033232ec115df12b622c96f813c13276a85ae2_square.jpg"
+            ]
+          },
+          "quantity": 3
+        }
+      ]
     }
   ],
   "products": [
@@ -71,7 +89,7 @@
     },
     {
       "id": "6854298f028e9678dd8f9bc2",
-      "title": "Hylomar 61701 13.53 Oz Cleaner Spray Can",
+      "title": "Hylomar 61701 13.53 Oz 123",
       "price": 28.53,
       "description": "Free Returns ✓ Free Shipping✓. Unbeatablesale Hylomar 61701 13.53 Oz Hylomar Cleaner Spray Can- Other Commercial Cleaning Supplies at SHEIN.",
       "category": "Other Commercial Cleaning Supplies",
@@ -375,6 +393,20 @@
         "https://img.ltwebstatic.com/images3_spmp/2024/07/28/d1/172215510180d506061ea0e91955ae393794cc3342.jpg",
         "https://img.ltwebstatic.com/images3_spmp/2024/07/28/d1/172215510180d506061ea0e91955ae393794cc3342.jpg",
         "https://img.ltwebstatic.com/images3_spmp/2024/07/28/d1/172215510180d506061ea0e91955ae393794cc3342.jpg"
+      ]
+    },
+    {
+      "id": "A85F6j9TX1tS5uihZCjV8",
+      "title": "dummy product",
+      "price": "1100",
+      "description": "this is any dummy product",
+      "category": "test",
+      "images": [
+        "https://plus.unsplash.com/premium_photo-1730828574264-e488348c6342?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1751677524360-978c93b2c0b2?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1743745330370-fb2c0c53fc9f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1742198832597-e43588e8ad28?q=80&w=1285&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://img.ltwebstatic.com/images3_spmp/2024/08/09/24/172318835752c2b6acbfe9a1ae23633b443b146c87_square.png"
       ]
     }
   ]
