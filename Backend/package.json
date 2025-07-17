@@ -12,16 +12,12 @@
     "json-server": "^0.17.4"
   },
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.0.1"
   },
   "engines": {
     "node": ">=14.0.0"
   },
-  "keywords": [
-    "json-server",
-    "api",
-    "ecommerce"
-  ],
+  "keywords": ["json-server", "api", "ecommerce"],
   "author": "Your Name",
   "license": "MIT"
 }
