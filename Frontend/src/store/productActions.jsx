@@ -18,9 +18,9 @@ export const asyncCreateProduct = (product) => async (dispatch) => {
     console.log(error);
   }
 };
-export const asyncUpdateProduct = (id,product) => async (dispatch) => {
+export const asyncUpdateProduct = (id, product) => async (dispatch) => {
   try {
-    await axios.patch("/products/"+id, product);
+    await axios.put("/products/" + id, product);
     dispatch(asyncLoadProduct());
   } catch (error) {
     console.log(error);
@@ -28,7 +28,7 @@ export const asyncUpdateProduct = (id,product) => async (dispatch) => {
 };
 export const asyncDeleteProduct = (id) => async (dispatch) => {
   try {
-    await axios.delete("/products/"+id);
+    await axios.delete("/products/" + id);
     dispatch(asyncLoadProduct());
   } catch (error) {
     console.log(error);
