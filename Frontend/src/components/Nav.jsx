@@ -2,15 +2,47 @@ import { useDispatch, useSelector } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
 import { setSearchQuery } from "../store/Reducers/productSlice.jsx";
 import MobileNav from "./MobileNav.jsx";
+import { useState, useEffect } from "react";
+
 const Nav = () => {
+  const [isLoginVisible, setIsLoginVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  
   const user = useSelector((state) => state.userReducer.users);
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  
   const searchHandler = (e) => {
     dispatch(setSearchQuery(e.target.value));
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      // Show login button when scrolling up or at the top
+      if (currentScrollY < lastScrollY || currentScrollY < 10) {
+        setIsLoginVisible(true);
+      } 
+      // Hide login button when scrolling down (and not at the top)
+      else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsLoginVisible(false);
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [lastScrollY]);
+
   return (
-    <nav className="nav w-full  text-[var(--nav-t)] flex items-center justify-between p-2">
+    <nav className="nav w-full text-[var(--nav-t)] flex items-center justify-between p-2">
       <div className="navLogo w-[15%] flex items-center justify-center gap-3  ">
         <i className="text-4xl ri-shopping-cart-2-line"></i>
         <h1 className="text-3xl font-fascinate">E-Cart</h1>
@@ -72,35 +104,39 @@ const Nav = () => {
         <i className="absolute right-5 top-2 ri-search-line"></i>
       </div>
       {/* // login and logout button */}
-     <div className="navLogin flex items-center justify-center w-[10%]">
-  {user?.length === 0 ? (
-    <button
-      onClick={() => navigate("/login")}
-      className="profileBtnBak hover:scale-98 active:scale-97 px-3 py-2 bg-[var(--btn)] rounded-md tracking-wider w-fit text-xl flex items-center justify-center gap-2"
-    >
-      {/* 👤 Mobile Icon */}
-      <i className="ri-user-add-line inline md:hidden profileIcon"></i>
+      <div className={`navLogin flex items-center justify-center w-[10%]
+        md:opacity-100 md:translate-y-0 
+        transition-all duration-300 ease-in-out
+        ${isLoginVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}
+      `}>
+        {user?.length === 0 ? (
+          <button
+            onClick={() => navigate("/login")}
+            className="profileBtnBak hover:scale-98 active:scale-97 px-3 py-2 bg-[var(--btn)] rounded-md tracking-wider w-fit text-xl flex items-center justify-center gap-2"
+          >
+            {/* 👤 Mobile Icon */}
+            <i className="ri-user-add-line inline md:hidden profileIcon"></i>
 
-      {/* 🖥️ Desktop Text */}
-      <h1 className="login hidden md:inline">Login</h1>
-    </button>
-  ) : (
-    <button
-      onClick={() => navigate("/user/profile")}
-      className="profileImage w-12 h-12 rounded-full ml-15 hover:scale-103 active:scale-100 overflow-hidden flex items-center justify-center"
-    >
-      {/* 👤 Mobile Icon */}
-      <i className="ri-user-follow-line inline md:hidden profileIcon text-xl"></i>
+            {/* 🖥️ Desktop Text */}
+            <h1 className="login hidden md:inline">Login</h1>
+          </button>
+        ) : (
+          <button
+            onClick={() => navigate("/user/profile")}
+            className="profileImage w-12 h-12 rounded-full ml-15 hover:scale-103 active:scale-100 overflow-hidden flex items-center justify-center"
+          >
+            {/* 👤 Mobile Icon */}
+            <i className="ri-user-follow-line inline md:hidden profileIcon text-xl"></i>
 
-      {/* 🖼️ Desktop Image */}
-      <img
-        className="w-full h-full object-cover hidden md:inline"
-        src={user?.profile}
-        alt="Profile"
-      />
-    </button>
-  )}
-</div>
+            {/* 🖼️ Desktop Image */}
+            <img
+              className="w-full h-full object-cover hidden md:inline"
+              src={user?.profile}
+              alt="Profile"
+            />
+          </button>
+        )}
+      </div>
 
       {/* Routes for moblie */}
       <MobileNav/>
