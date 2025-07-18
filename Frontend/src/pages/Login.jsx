@@ -15,7 +15,7 @@ const Login = () => {
     navigate("/register");
   };
   return (
-    <div className="bg-[var(--bg)] h-[92.6vh] w-full flex items-center justify-center">
+    <div className="loginMain bg-[var(--bg)] h-[92.6vh] w-full flex items-center justify-center">
       <form
         onSubmit={handleSubmit(loginHandler)}
         className="loginBg bg-[var(--border)] h-[60%] w-[35%] p-10 rounded-xl flex gap-6 flex-col"

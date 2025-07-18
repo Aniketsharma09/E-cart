@@ -180,11 +180,11 @@ html,body, #root{
   }
   .productCartContainer{
     padding: 1rem;
-    gap: 15px;
+   justify-content: space-between;
     overflow : hidden;
   }
   .productCart{
-    width: 43vw;
+    width: 42.5vw;
     height: 35vh;
   }
   .imgContainer{
@@ -313,9 +313,9 @@ html,body, #root{
   .productHeading > h2{
     display: none;
   }
-  .productPrice{
+  /* .productPrice{
     display: none;
-  }
+  } */
   .ProductIncDec{
     position: absolute;
      left: 25%;
@@ -345,15 +345,20 @@ html,body, #root{
   .userCartInfo > button{
     font-size: .8rem;
   }
+  .loginMain{
+    align-items: start;
+  }
   .loginBg{
+    margin-top: 10rem;
     width: 90%;
-    height: 50%;
+    height: fit-content;
   }
   .registerBg{
     width: 90%;
   }
   .aboutTopDiv{
-    height: 57vh;
+    height: fit-content;
+    padding-bottom: 8rem;
     justify-content: start;
   }
   .aboutTopDiv > h1{
