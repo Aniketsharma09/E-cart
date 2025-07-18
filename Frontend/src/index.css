@@ -180,11 +180,11 @@ html,body, #root{
   }
   .productCartContainer{
     padding: 1rem;
-   justify-content: space-between;
+   gap: 15px;
     overflow : hidden;
   }
   .productCart{
-    width: 42.5vw;
+    width: 42vw;
     height: 35vh;
   }
   .imgContainer{
