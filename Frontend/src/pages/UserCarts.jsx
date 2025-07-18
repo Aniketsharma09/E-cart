@@ -9,6 +9,7 @@ const UserCarts = () => {
   const navigate = useNavigate();
 
   const [localCart, setLocalCart] = useState([]);
+  const [isUpdating, setIsUpdating] = useState(false);
 
   // Update local cart when redux user changes
   useEffect(() => {
@@ -21,12 +22,24 @@ const UserCarts = () => {
     navigate("/");
   };
 
-  const updateCartInRedux = (updatedCart) => {
-    const updatedUser = { ...users, cart: updatedCart };
-    dispatch(asyncUpdateUser(updatedUser, updatedUser.id));
+  const updateCartInRedux = async (updatedCart) => {
+    if (isUpdating) return; // Prevent multiple simultaneous updates
+    
+    setIsUpdating(true);
+    try {
+      const updatedUser = { ...users, cart: updatedCart };
+      await dispatch(asyncUpdateUser(updatedUser, updatedUser.id));
+      console.log("Cart updated successfully");
+    } catch (error) {
+      console.error("Failed to update cart:", error);
+      // Revert local cart on error
+      setLocalCart(users.cart || []);
+    } finally {
+      setIsUpdating(false);
+    }
   };
 
-  const increaseQuantityHandler = (product, id) => {
+  const increaseQuantityHandler = async (product, id) => {
     const updatedCart = [...localCart];
     const idx = updatedCart.findIndex((c) => c.product.id === id);
 
@@ -40,10 +53,10 @@ const UserCarts = () => {
     }
 
     setLocalCart(updatedCart); // update UI immediately
-    updateCartInRedux(updatedCart); // update redux
+    await updateCartInRedux(updatedCart); // update redux
   };
 
-  const decreaseQuantityHandler = (product, id) => {
+  const decreaseQuantityHandler = async (product, id) => {
     const updatedCart = [...localCart];
     const idx = updatedCart.findIndex((c) => c.product.id === id);
 
@@ -59,7 +72,7 @@ const UserCarts = () => {
     }
 
     setLocalCart(updatedCart);
-    updateCartInRedux(updatedCart);
+    await updateCartInRedux(updatedCart);
   };
 
   let totalAmount = 0;
@@ -68,7 +81,7 @@ const UserCarts = () => {
       (totalAmount += c.product.price * c.quantity),
       (
         <div
-          className="userCartContainer flex items-center justify-between mt-5"
+          className="userCartContainer absolute z-10 flex items-center justify-between mt-5"
           key={c.product.id}
         >
           <div className="productInfor w-[40%] flex p-1">
@@ -94,14 +107,20 @@ const UserCarts = () => {
           <div className="ProductIncDec w-[24%] flex items-center justify-center gap-5">
             <button
               onClick={() => decreaseQuantityHandler(c.product, c.product.id)}
-              className="cursor-pointer text-3xl hover:scale-103 active:scale-100 text-[var(--text-h)]"
+              disabled={isUpdating}
+              className={`cursor-pointer text-3xl hover:scale-103 active:scale-100 text-[var(--text-h)] ${
+                isUpdating ? 'opacity-50 cursor-not-allowed' : ''
+              }`}
             >
               -
             </button>
             <h1 className="text-[var(--text-h)]">{c.quantity}</h1>
             <button
               onClick={() => increaseQuantityHandler(c.product, c.product.id)}
-              className="cursor-pointer text-2xl hover:scale-103 active:scale-100 text-[var(--text-h)]"
+              disabled={isUpdating}
+              className={`cursor-pointer text-2xl hover:scale-103 active:scale-100 text-[var(--text-h)] ${
+                isUpdating ? 'opacity-50 cursor-not-allowed' : ''
+              }`}
             >
               +
             </button>
