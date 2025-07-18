@@ -81,7 +81,7 @@ const UserCarts = () => {
       (totalAmount += c.product.price * c.quantity),
       (
         <div
-          className="userCartContainer absolute z-10 flex items-center justify-between mt-5"
+          className="userCartContainer z-10 flex items-center justify-between mt-5"
           key={c.product.id}
         >
           <div className="productInfor w-[40%] flex p-1">
